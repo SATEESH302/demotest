@@ -10,7 +10,7 @@ phases:
 
   build:
     commands:
-      - pytest -s -vvv tests/unit/ --junitxml=reports/unit.xml
+      - pytest -s -v tests/unit/ --junitxml=reports/unit.xml
 
 reports:
   StateMachineUnitTestReports:
