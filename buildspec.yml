@@ -13,8 +13,7 @@ phases:
       - mkdir test-reports
   build:
     commands:
-      - python -m pytest tests/  --junitxml=<test report directory>/<report filename>
-        
+      - python -m pytest tests/  
   
 
  
