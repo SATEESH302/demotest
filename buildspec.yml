@@ -11,9 +11,9 @@ phases:
 
   build:
     commands:
-      - python -m pytest 
+      - python -m pytest --junitxml=tests
 reports:
   StateMachineUnitTestReports:
     files:
-      - "**/*"
-    base-directory: "reports"
+      - report filename
+    base-directory: tests
