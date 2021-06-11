@@ -35,13 +35,13 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-  reports:
-  StateMachineUnitTestReports:
-  coverage:
-    files:
-      - "coverage/*"
-    base-directory: 'test-reports'
-    discard-paths: yes
+#   reports:
+#   StateMachineUnitTestReports:
+#   coverage:
+#     files:
+#       - "coverage/*"
+#     base-directory: 'test-reports'
+#     discard-paths: yes
   report:
     files:
       - report filename
