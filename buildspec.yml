@@ -14,7 +14,7 @@ phases:
     commands:
       - python - pytest -v tests/ --junitxml=tests
       - python - pytest --cov
-      - pytest --html=test-reports/report.html --self-contained-html --junitxml=test-reports/junit.xml  --log-file=test-reports/logs.txt tests
+      - pytest --html=test-reports/report.html --self-contained-html --junitxml=test-reports/junit.xml  --log-file=test-reports/logs.txt tests/
   post_build:
     commands:
       - echo Build completed on `date`
