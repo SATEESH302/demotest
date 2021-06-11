@@ -18,19 +18,6 @@ def test_calc_addition():
 
 
 
-def test_calc_substraction():
-
-    output = mathlib.calc_substraction(2, 4)
-
-
-def test_calc_multiply():
-
-    output = mathlib.calc_multiply(2, 4)
-
-
-def test_calc_mult():
-
-    output = mathlib.calc_multiply(0, 4)
 
 
 
