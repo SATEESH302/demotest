@@ -35,24 +35,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-  reports:
-    StateMachineUnitTestReports:
-    coverage:
-      files:
-        - "coverage/*"
-      base-directory: 'test-reports'
-      discard-paths: yes
-  report:
-    files:
-      - report filename
-    base-directory: tests
-      - 'junit.xml'
-      - 'report.html'
-      - 'assets/*'
-    base-directory: 'test-reports'
-    discard-paths: yes
-    file-format: JunitXml
-
+  
 
  
 
