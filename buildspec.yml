@@ -9,11 +9,14 @@ phases:
       
       - pip install --upgrade pip
       - pip install -r tests/requirements.txt
+      - pip install pytest-cov
+
       - rm -rf dspt
       - mkdir test-reports
   build:
     commands:
-      - python - pytest -v tests/  
+      - python - pytest -v tests/test_func.py
+      - python - pytest --cov
   
 
  
