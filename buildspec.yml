@@ -14,10 +14,7 @@ phases:
     commands:
       - python - pytest -v tests/ ----junitxml=tests/
       - python - pytest --cov
-     
-  post_build:
-    commands:
-      - echo Build completed on `date`
+
 reports:
   pytest_reports:
     files:
