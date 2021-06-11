@@ -7,17 +7,52 @@ phases:
   pre_build:
     commands:
       
-      - pip install --upgrade pip
-      - pip install -r tests/requirements.txt
-      - pip install pytest-cov
+      - pip3 install -r tests/requirements.txt
+      - pip3 install pytest
 
+      - apt-get install -y python3-venv
+      - python3.6 -m venv test_venv
+      - . test_venv/bin/activate
+      - pip install --upgrade pip
+      - pip install .
+      - pip install -r tests/requirements.txt
       - rm -rf dspt
       - mkdir test-reports
   build:
     commands:
-      - python - pytest -v tests/test_func.py
+      - python - pytest -v tests/ --junitxml=tests
       - python - pytest --cov
-  
+      - pytest 
+        --html=test-reports/report.html 
+        --self-contained-html
+        -s
+        -v
+        --cov=dspt 
+        --cov-report=html:test-reports/coverage 
+        --junitxml=test-reports/junit.xml 
+        --log-file=test-reports/logs.txt 
+        tests
+  post_build:
+    commands:
+      - echo Build completed on `date`
+  reports:
+  StateMachineUnitTestReports:
+  coverage:
+    files:
+      - "coverage/*"
+    base-directory: 'test-reports'
+    discard-paths: yes
+  report:
+    files:
+      - report filename
+    base-directory: tests
+      - 'junit.xml'
+      - 'report.html'
+      - 'assets/*'
+    base-directory: 'test-reports'
+    discard-paths: yes
+    file-format: JunitXml
+
 
  
 
