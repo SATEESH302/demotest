@@ -13,7 +13,7 @@ phases:
       - mkdir test-reports
   build:
     commands:
-      - python -m pytest tests/  
+      - python - pytest -v tests/  
   
 
  
