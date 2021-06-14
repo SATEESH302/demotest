@@ -13,8 +13,8 @@ phases:
       - mkdir test-reports
   build:
     commands:
-      - python pytest -v tests/ --junitxml=tests/junit.xml  
-      - python pytest --cov
+      - pytest -v tests/ --junitxml=tests/junit.xml  
+      - pytest --cov
       
       
 
