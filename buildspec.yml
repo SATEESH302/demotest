@@ -15,9 +15,6 @@ phases:
       - python - pytest -v tests/ ----junitxml=tests/coverage
       - python - pytest --cov
       
-  artifacts:
-    files:
-      - '**/*'
 
 reports:
   pytest_reports:
