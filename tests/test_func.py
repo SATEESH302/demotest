@@ -4,8 +4,8 @@
 # In[ ]:
 
 
-import mathlib
-from mathlib import lambda_handler
+
+from lambdas.mathlib import lambda_handler
 
 def test_calc_addition():
 
