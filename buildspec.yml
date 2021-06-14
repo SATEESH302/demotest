@@ -9,11 +9,13 @@ phases:
       
       - pip3 install -r tests/requirements.txt
       - pip3 install pytest
+      - pip freeze
       - mkdir test-reports
   build:
     commands:
       - python pytest -v tests/ --junitxml=tests/junit.xml  
       - python pytest --cov
+      
       
 
 reports:
